@@ -1,0 +1,19 @@
+https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/description/
+
+
+Using Java
+
+
+class Solution {
+    public int subtractProductAndSum(int n) {
+         int sum=0,pro=1,result,num=n;
+        while(num>0)
+        {
+            result=num%10;
+            sum=sum+result;
+            pro=pro*result;
+            num=num/10;
+        }
+        return pro-sum;
+    }
+}
