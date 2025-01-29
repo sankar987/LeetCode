@@ -1,0 +1,13 @@
+https://leetcode.com/problems/convert-the-temperature/description/
+
+
+Using Java
+
+class Solution {
+    public double[] convertTemperature(double celsius) {
+        double[] kelvin=new double[2];
+        kelvin[0]=celsius+273.15;
+        kelvin[1]=celsius*1.80+32.00;
+        return kelvin;
+    }
+}
