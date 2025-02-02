@@ -1,0 +1,22 @@
+https://leetcode.com/problems/harshad-number/description/
+
+Using Java
+
+class Solution {
+    public int sumOfTheDigitsOfHarshadNumber(int x) {
+        int sum=0;
+        int dup=x;
+        while(dup>0)
+        {
+            int rem=dup%10;
+            sum=sum+rem;
+            dup/=10;
+        }
+        if(x%sum==0){
+            return sum;
+        }
+        else{
+            return -1;
+        }
+        }
+    }
