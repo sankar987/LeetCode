@@ -1,0 +1,20 @@
+https://leetcode.com/problems/minimum-number-of-chairs-in-a-waiting-room/description/
+
+Using Java 
+
+class Solution {
+    public int minimumChairs(String s) {
+        int max = 0;
+        int occupied = 0;
+        for (char c: s.toCharArray()){
+            if (c == 'E'){
+                occupied++;
+                max = Math.max(occupied,max);
+            }else if (c == 'L'){
+                occupied--;
+            }  
+        }
+        max = Math.max(occupied,max);
+        return max;
+    }
+}
