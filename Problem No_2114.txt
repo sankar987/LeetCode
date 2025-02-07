@@ -1,0 +1,20 @@
+https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/description/
+
+Using Java
+
+class Solution {
+    public int mostWordsFound(String[] sentences) {
+        int maxWords = 0;
+
+       
+        for (String sentence : sentences) {
+           
+            String[] words = sentence.split(" ");
+            
+           
+            maxWords = Math.max(maxWords, words.length);
+        }
+
+        return maxWords;
+    }
+}
