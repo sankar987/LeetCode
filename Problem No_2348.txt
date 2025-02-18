@@ -1,0 +1,24 @@
+https://leetcode.com/problems/number-of-zero-filled-subarrays/description/
+
+Using Java
+
+public class Solution {
+    public long zeroFilledSubarray(int[] nums) {
+        long count = 0;
+        long length = 0;
+        for (int num : nums) {
+            if (num == 0) {
+                length++;
+            } else {
+                if (length > 0) {
+                    count += (length * (length + 1)) / 2;  
+                }
+                length = 0; 
+            }
+        }
+        if (length > 0) {
+            count += (length * (length + 1)) / 2;
+        }
+        return count;
+    }
+}
